@@ -2,6 +2,8 @@ package search;
 
 import java.util.Scanner;
 
+import utils.SearchStringUtil;
+
 public class Exercise3_2 {
 
 	public static int seqSearch(int[] array, int n, int key) {
@@ -41,39 +43,6 @@ public class Exercise3_2 {
 			} else {
 				System.out.println("その値はx[" + idx + "]にあります。");
 			}
-		}
-	}
-
-	public static class SearchStringUtil {
-		public static void printHeader(int n) {
-			System.out.print("   |");
-			for (int i = 0; i < n; i++) {
-				System.out.print("   " + i);
-			}
-			System.out.println();
-			System.out.print("---+");
-			for (int i = 0; i < n; i++) {
-				System.out.print("----");
-			}
-			System.out.println();
-		}
-
-		public static void printPointer(int i, String mark) {
-			System.out.print("   |");
-			for (int j = 0; j < i; j++) {
-				System.out.print("    ");
-			}
-			System.out.print("   " + mark);
-			System.out.println();
-		}
-
-		public static String getElementsString(int[] array) {
-			String str = "";
-			for (int i = 0; i < array.length; i++) {
-				str += "   " + array[i];
-			}
-			str += "\n";
-			return str;
 		}
 	}
 }
