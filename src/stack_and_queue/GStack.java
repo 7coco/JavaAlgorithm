@@ -13,7 +13,7 @@ public class GStack<E> {
 	}
 
 	public E push(E x) {
-		if (pointer <= max) {
+		if (pointer >= max) {
 			throw new OverflowGStackException();
 		}
 		stack[pointer] = x;
