@@ -86,6 +86,15 @@ public class IntQueue {
 		}
 	}
 
+	public int search(int x) {
+		for (int i = 0; i < max; i++) {
+			if (queue[(i + front) % max] == x) {
+				return i + 1;
+			}
+		}
+		return 0;
+	}
+
 	@SuppressWarnings("serial")
 	public static class EmptyIntQueueException extends RuntimeException {
 		public EmptyIntQueueException() {}
